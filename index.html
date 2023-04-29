@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人网站</title>
+  <style>
+    /* 基本样式 */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      color: #333;
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+    section {
+      margin: 20px;
+    }
+    h1 {
+      font-size: 36px;
+    }
+    h2 {
+      font-size: 24px;
+      margin: 20px 0;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    /* 响应式布局 */
+    @media (min-width: 768px) {
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      header {
+        flex: 0 0 auto;
+      }
+      nav {
+        flex: 0 0 auto;
+        display: flex;
+        justify-content: center;
+      }
+      nav a {
+        margin: 0 10px;
+      }
+      section {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      h1 {
+        font-size: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>个人网站</h1>
+  </header>
+  <nav>
+    <a href="#">首页</a>
+    <a href="#">关于我</a>
+    <a href="#">博客</a>
+    <a href="#">联系我</a>
+  </nav>
+  <section>
+    <h2>欢迎来到我的个人网站</h2>
+    <p>我是一个热爱技术的人，喜欢学习各种新技术，并在我的博客中分享我的经验和见解。</p>
+  </section>
+</body>
+</html>
