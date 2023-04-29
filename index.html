@@ -2,20 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Yuhang Xu</title>
+  <title>Yuhang Xu 徐宇航</title>
+  <link rel="shortcut icon" href="./image/favicon2.jpg"/>
   <style>
     /* 基本样式 */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      /*
+      background: url('./image/bg1.jpg'), url('./image/bg2.jpg'), url('./image/bg3.jpg'), url('./image/bg4.jpg'), url('./image/bg5.jpg'), url('./image/bg6.jpg'), url('./image/bg7.jpg'), url('./image/bg7.jpg');
+      background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+      background-size:contain, contain, contain, contain, contain, contain, contain, contain;
+      background-attachment: scroll, scroll, scroll, scroll, scroll, scroll, scroll, scroll;
+      background-position: 0 0,0 200,800 0;
+      */
+      backdrop-filter: blur(4px);
     }
-    section {
-      margin: 20px;
+    video{  
+            position:fixed;   
+            top: 0;
+            left: 0;
+            height: 100%;  
+            width: 100%;  
+            /*加滤镜*/
+            filter: blur(2px); 
+            object-fit: cover;
+            /*-webkit-filter: grayscale(100%);*/  
+            /*filter:grayscale(100%); //背景灰度设置*/  
+            z-index:-1
+    } 
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: #ffffffc5;
+      position: relative;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.952);
     }
-    h1 {
+    .section {
+      margin: 20px 0;
+      position: relative;
+    }
+    .section-title {
       font-size: 28px;
       margin: 10px 0;
+      border-bottom: 1px solid #b8b7b7;
+      padding-bottom: 5px;
+    }
+    .section-number {
+      position: absolute;
+      top: -10px;
+      left: -35px;
+      font-size: 48px;
+      font-weight: bold;
+      text-shadow: 0 0 13px rgba(0, 0, 0, 0.952);
+      color: #ffffff;
+    }
+    .section-icon {
+      position: absolute;
+      top: -10px;
+      left: -75px;
+      font-size: 48px;
+      color: #5f5f5f;
     }
     h2 {
       font-size: 24px;
@@ -25,46 +74,226 @@
       font-size: 20px;
       margin: 10px 0;
     }
+    p2{
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 0 0 10px 0;
+    }
     p {
       font-size: 16px;
       line-height: 1.5;
+      margin: 0 0 10px 0;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    ul li {
+      margin: 0;
+      padding: 5px 0;
+      position: relative;
+    }
+    ul li:before {
+      content: "\2022";
+      position: absolute;
+      left: -20px;
+      top: 7px;
+      color: #ccc;
+      font-size: 20px;
+    }
+    .profile-image {
+      display: block;
+      margin: 0 auto;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      background: url('./image/avatar@2x.jpg') no-repeat center center;
+      background-size: cover;
     }
   </style>
 </head>
 <body>
-  <section>
-    <h1>个人介绍</h1>
-    <p>我是XXX，毕业于XXX大学，现为XXX公司的一名XXX工程师。我对XXX技术有着浓厚的兴趣，并在XXX领域有着丰富的经验。</p>
-  </section>
-  <section>
-    <h1>教育经历</h1>
-    <h2>XXX大学</h2>
-    <h3>XXX专业</h3>
-    <p>本科学习期间，我学习了XXX、XXX和XXX等课程，并在XXX实验室参与了XXX项目。</p>
-  </section>
-  <section>
-    <h1>研究经历</h1>
-    <h2>XXX研究所</h2>
-    <h3>研究员</h3>
-    <p>在XXX研究所的工作期间，我参与了XXX项目，并发表了多篇论文，其中XXX被XXX顶级会议/期刊录用。</p>
-  </section>
-  <section>
-    <h1>工作经历</h1>
-    <h2>XXX公司</h2>
-    <h3>XXX工程师</h3>
-    <p>在XXX公司的工作期间，我参与了XXX项目，并负责XXX，并取得了XXX的成果。</p>
-  </section>
-  <section>
-    <h1>竞赛和奖项</h1>
-    <ul>
-      <li>XXX竞赛XXX奖项</li>
-      <li>XXX竞赛XXX奖项</li>
-      <li>XXX竞赛XXX奖项</li>
-    </ul>
-  </section>
-  <section>
-    <h1>个人陈述</h1>
-    <p>我是一个充满激情和创造力的人，喜欢接受新的挑战和机遇。我积极主动，善于解决问题，并具有很强的团队合作和沟通能力。</p>
-  </section>
+  <video id="v1" autoplay loop muted>
+    <source src="./bg.mp4" type="video/mp4"  />
+</video>
+  <div class="container">
+    <div class="section">
+      <div class="section-number">1</div>
+      <div class="section-icon">
+        <i class="fa fa-user"></i>
+      </div>
+      <div class="section-title">Personal Information</div>
+      <div class="section-content">
+        <div class="profile-image"></div>
+        <h2>Yuhang Xu 徐宇航</h2>
+        <p>E-mal: yuhangxu0328@163.com</p>
+        <p>Phone: +86 15098128859</p>
+        <p>Address: Nanjing, Jiangsu Province</p>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-number">2</div>
+      <div class="section-icon">
+        <i class="fa fa-graduation-cap"></i>
+      </div>
+      <div class="section-title">Education Background</div>
+      <div class="section-content">
+        <ul>
+          <li>
+            <h3 style="float: right;">Bachelor's Degree</h3>
+            <h3>Nanjing university</h3>
+            <p2 style="float: right;">09/2020--07/2024</p2>
+            <p> <i>School of Electronic Science and Engineering</i></p>
+            <p><b>GPA: 4.5/5.0 &nbsp &nbsp &nbsp &nbsp Professional Ranking:4/39</b> </p>
+            <p><b>English level:</b> CET-4:658  &nbsp  &nbsp CET-6:546  &nbsp  &nbsp TOFEL iBT:93</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-number">3</div>
+      <div class="section-icon">
+        <i class="fa fa-briefcase"></i>
+      </div>
+      <div class="section-title">Research Experience</div>
+      <div class="section-content">
+        <ul>
+          <li>
+            <h3>Ⅰ. National Innovation Training Program for Undergraduates in Key Areas of Support "Information
+              Display Zero - Research on the Preparation of Gallium Nitride Based Micro-LED Devices"
+              07/2021</h3>
+            <p2 style="float: right;">07/2021--11/2022</p2>
+            <p><br /></p>
+            <p><b>· Research content: </b>We summarized and refined the complete preparation process of micro-LED; took the experimental
+              certificate of microelectronics processing center, and finished the preparation of micro-LED display module
+              and the setting of FPGA driver circuit by grinding and polishing, cutting, PECVD, lithography, ICP, RIE and other
+              processes of a complete wafer.</p>
+            <p><b>· Research achievement: </b><b>apply for an invention patent:</b> the method of preparing high-resolution
+              nano-image element display array by using flexible nano-dwelling film; meanwhile, participate in the 2022
+              National Internet+ Competition based on this project and <b>win the national gold medal.</b></p>
+            <p style="text-align: center;">
+              <img  src="./image/research/1.jpg" alt="" width="250" height="180" align="middle">
+              <img  src="./image/research/2.jpg" alt="" width="250" height="180" align="middle">
+            </p>
+            <br />
+            <p style="text-align: center;">
+            <img src="./image/research/3.jpg" alt="" width="250" height="220">
+            <img src="./image/research/4.jpg" alt="" width="200" height="250">
+            </p>
+            <ul>
+              <h3>Ⅱ. Electronic design competition project - a complete demodulation set</h3>
+              <p2 style="float: right;">06/2022--08/2022</p2>
+              <p><br /></p>
+              <li><b>· Research content:</b> Afer studying the design of PCB of AM and FM demodulation system related components in
+                high frequency circuit, the construction of the system and the debugging of the software, finally we finished
+                the preparation of a whole set of devices that can automatically identify the type of AM\FM modulated wave
+                and automatically demodulate and calculate the modulation system.</li>
+              <li><b>· Research achievements: </b><b>won the first prize </b>of 2022 Jiangsu Province Electronic Design Competition;
+                and <b>wrote a paper </b>published in "Electronic Measurement Technology".</li>
+              <p style="text-align: center;">
+                <img  src="./image/research/5.jpg" alt="" width="300" height="250" align="middle">
+                <img  src="./image/research/6.jpg" alt="" width="300" height="300" align="middle">
+              </p>
+            </ul>
+          </li>
+          <li>
+            <h3>Ⅲ. Development of small weak target detection system based on Vitis AI FPGA</h3>
+            <p2 style="float: right;">09/2022--till now</p2>
+            <br />
+            <p><b>Research content: </b>The research explores a comprehensive AI inference development platform developed
+              by Ceres: Vitis-AI, which includes a rich set of AI models, optimized deep learning processor unit (DPU)
+              kernels, tools, libraries, and AI designs on the edge and data center side.
+              Initial exploration, literature and operation manual reading, and training of the yolov5 weak target detection
+              model are currently underway. Subsequently, it will be deployed to the Celeris board and connected to the
+              camera to actually test the training effect.</p>
+              <p style="text-align: center;">
+                <img  src="./image/research/7.jpg" alt="" width="320" height="230" align="middle">
+                <img  src="./image/research/8.jpg" alt="" width="320" height="280" align="middle">
+              </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-number">4</div>
+      <div class="section-icon">
+        <i class="fa fa-briefcase"></i>
+      </div>
+      <div class="section-title">Honrs & Awards</div>
+      <div class="section-content">
+        <ul>
+          <li>
+            <h3>Competition</h3>
+            <p>2022 TI Cup Jiangsu Province Electronic Design Competition (Captain) First Prize</p>
+            <p>The 8th China International "Internet+" Student Innovation and Entrepreneurship Competition
+              Industry Track National Gold Award</p>
+            <p>The first prize of the micro display competition of Nanjing University "Painting a century with ink,
+              Nanyong starts a new journey"</p>
+            <h3>Scholarship</h3>
+            <p>2022 "Pulsar Elite" Scholarship</p>
+            <p>2022Chang Jiangsuyou Scholarship</p>
+            <p>2020 Nanjing University "Jin Xiao Electronic Scholarship"</p>
+            <p>2021 People's Scholarship Award for Science and Technology Innovation</p>
+            <p>2022 People's Scholarship Subject Competition Award</p>
+            <h3>Honors</h3>
+            <p>Outstanding students for the academic year 2021-2022</p>
+            <p>2020-2021 Nanjing University Freshman College Outstanding Students</p>
+            <p>2022 Outstanding Youth League Member of Nanjing University</p>
+            <p>2021 Nanjing University Social Practice Outstanding Students</p>
+            <p style="text-align: center;">
+              <img  src="./image/research/9.jpg" alt="" width="300" height="180" align="middle">
+              <img  src="./image/research/10.jpg" alt="" width="400" height="180" align="middle">
+            </p>
+            <ul>
+    </div>
+    <div class="section">
+      <div class="section-number">5</div>
+      <div class="section-icon">
+        <i class="fa fa-briefcase"></i>
+      </div>
+      <div class="section-title">Work & Campus Experience</div>
+      <div class="section-content">
+        <ul>
+          <li>
+            <h3>Deputy Director of Video Center, Nanjing Nanbo o Play Culture Communication Co.Ltd</h3>
+            <p2 style="float: right;">03/2022--12/2022</p2>
+            <br />
+            <p>· Responsible for organizing the weekly meetings of the video center, completing the minutes of the meetings,
+              writing part of the video shooting plan, and completing the shooting and editing of some videos.</p>
+              <p style="text-align: center;">
+                <img  src="./image/research/11.jpg" alt="" width="160" height="180" align="middle">
+                <img  src="./image/research/12.jpg" alt="" width="200" height="180" align="middle">
+              </p>
+              <h3>Director of Communications, Nanjing University E Creative Society </h3>
+              <p2 style="float: right;">09/2021--11/2022</p2>
+              <br />
+              <p>· Responsible for the editing and management of the public tweets of the E Creative Society and the Nanjing
+                University Electronic Laboratory Center.</p>
+              <h3>Members of the Creative Practice Department, School of Electronic Science and Engineering,
+                Nanjing University  </h3>
+              <p2 style="float: right;">09/2021--09/2022</p2>
+              <br />
+              <p>· Responsible for organizing various innovative practical activities, lectures and presentations within the
+                School of Electronic Science and Engineering.</p>
+            <ul>
+    </div>
+    <div class="section">
+      <div class="section-number">6</div>
+      <div class="section-icon">
+        <i class="fa fa-briefcase"></i>
+      </div>
+      <div class="section-title">Skills</div>
+      <div class="section-content">
+        <ul>
+          <li>
+            <p><b>· Languages: </b>Chinese (native), English (good)</p>
+            <p><b>· EE Skills: </b>Proficiency in MS Excel, Word, etc. Good at using software such as PS and PR. Very familiar with
+              programming language such as C, Python and MATLAB</p>
+            <ul>
+    </div>
+  </div>
 </body>
 </html>
